@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 124px;
+            margin-bottom: 43px;
+        }
+    </style>
+
+    <style>
+ul {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+</style>
+
+
+</head>
+   
+<body>
+   <form id="form1" runat="server">
+    
+        <div id="wrapper">
+            
+                
+                            
+                             
+                            <ul>
+                                    <li  style="float:right" >
+                                          <asp:HyperLink ID="LinkSignIn" runat="server" NavigateUrl="~/UserAcc/Signin.aspx">Sign In</asp:HyperLink>                             
+                                          <asp:LinkButton ID="ButtonSignOut" runat="server" Text="Sign out" OnClick="LinkSignOut_Click" />                      
+                                    </li>                          
+                             
+                                     <li  style="float:right">
+                                         <asp:HyperLink ID="LinkRegister" runat="server"  NavigateUrl="~/UserAcc/RegistrationAcc.aspx">Register</asp:HyperLink>  
+                                         <asp:HyperLink ID="litStatus" runat="server" NavigateUrl="~/Webpages/ShoppingCart.aspx" ></asp:HyperLink>
+                                     </li>
+
+                                </ul>
+
+
+                                
+                           
+                   <p>
+                        &nbsp;
+                        <asp:ImageButton ID="Logo" runat="server" DescriptionUrl="~/Default.aspx" Height="117px" ImageUrl="~/images/Logo.png" Width="211px" />
+                        <asp:Image ID="Image1" runat="server" Height="79px" ImageUrl="~/images/Banner.png" Width="615px" />
+                   </p>
+                       
+                   
+            
+            
+
+            
+             <ul>
+                    <li >
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Lets Shop</asp:HyperLink></li>
+                    <li >
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/webpages/About.aspx">About us</asp:HyperLink></li>
+                    <li >
+                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Webpages/contact2.aspx">Contact Us</asp:HyperLink></li>
+                    <li style="float:right" >
+                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Adminpages/Administrator.aspx">Administration</asp:HyperLink></li>
+                </ul>
+                  
+            
+            <div id="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+        
+    </div>
+      <div id="footer">
+        <div class="wrapper row5">
+            <footer id="copyright" class="clear">
+                <p class="fl_left">
+                    <a href="http://validator.w3.org/check?uri=referer">Validate HTML</a> |
+<a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a> |
+<a href="http://achecker.ca/checker/?uri=referer">Check WCAG</a>
+                    Copyright © 2007 - 2016 - The Swixth Shop Sdn Bhd</p>
+            </footer>
+        </div>
+    </div>
+
+    </form>
+
+    
+</body>
+</html>
