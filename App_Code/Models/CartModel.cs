@@ -8,7 +8,7 @@ public class CartModel
 {
     public List<Cart> GetOrdersInCart(string userId)
     {
-        db_1525657_websiteEntities db = new db_1525657_websiteEntities();
+        db_1525657_sweethswixthshopEntities db = new db_1525657_sweethswixthshopEntities();
         List<Cart> orders = (from x in db.Carts
                              where x.ClientID == userId
                              && x.IsInCart
@@ -21,7 +21,7 @@ public class CartModel
     {
         try
         {
-            db_1525657_websiteEntities db = new db_1525657_websiteEntities();
+            db_1525657_sweethswixthshopEntities db = new db_1525657_sweethswixthshopEntities();
             int amount = (from x in db.Carts
                           where x.ClientID == userId
                           && x.IsInCart
@@ -37,7 +37,7 @@ public class CartModel
 
     public void UpdateQuantity(int id, int quantity)
     {
-        db_1525657_websiteEntities db = new db_1525657_websiteEntities();
+        db_1525657_sweethswixthshopEntities db = new db_1525657_sweethswixthshopEntities();
         Cart p = db.Carts.Find(id);
         p.Amount = quantity;
 
@@ -46,7 +46,7 @@ public class CartModel
 
     public void MarkOrdersAsPaid(List<Cart> carts)
     {
-        db_1525657_websiteEntities db = new db_1525657_websiteEntities();
+        db_1525657_sweethswixthshopEntities db = new db_1525657_sweethswixthshopEntities();
 
         if (carts != null)
         {
@@ -64,7 +64,7 @@ public class CartModel
     {
         try
         {
-            db_1525657_websiteEntities db = new db_1525657_websiteEntities();
+            db_1525657_sweethswixthshopEntities db = new db_1525657_sweethswixthshopEntities();
             db.Carts.Add(cart);
             db.SaveChanges();
 
@@ -81,7 +81,7 @@ public class CartModel
     {
         try
         {
-            db_1525657_websiteEntities db = new db_1525657_websiteEntities();
+            db_1525657_sweethswixthshopEntities db = new db_1525657_sweethswixthshopEntities();
 
            
             Cart p = db.Carts.Find(id);
@@ -106,7 +106,7 @@ public class CartModel
     {
         try
         {
-            db_1525657_websiteEntities db = new db_1525657_websiteEntities();
+            db_1525657_sweethswixthshopEntities db = new db_1525657_sweethswixthshopEntities();
             Cart cart = db.Carts.Find(id);
 
             db.Carts.Attach(cart);

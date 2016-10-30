@@ -10,7 +10,7 @@ public class ProductTypeModel
     {
         try
         {
-            db_1525657_websiteEntities db = new db_1525657_websiteEntities();
+            db_1525657_sweethswixthshopEntities db = new db_1525657_sweethswixthshopEntities();
             db.ProductTypes.Add(productType);
             db.SaveChanges();
 
@@ -26,7 +26,7 @@ public class ProductTypeModel
     {
         try
         {
-            db_1525657_websiteEntities db = new db_1525657_websiteEntities();
+            db_1525657_sweethswixthshopEntities db = new db_1525657_sweethswixthshopEntities();
 
             
             ProductType p = db.ProductTypes.Find(id);
@@ -47,7 +47,7 @@ public class ProductTypeModel
     {
         try
         {
-            db_1525657_websiteEntities db = new db_1525657_websiteEntities();
+            db_1525657_sweethswixthshopEntities db = new db_1525657_sweethswixthshopEntities();
             ProductType productType = db.ProductTypes.Find(id);
 
             db.ProductTypes.Attach(productType);

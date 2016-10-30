@@ -130,15 +130,6 @@ public partial class ProductType
     public virtual ICollection<Product> Products { get; set; }
 }
 
-public partial class sysdiagram
-{
-    public string name { get; set; }
-    public int principal_id { get; set; }
-    public int diagram_id { get; set; }
-    public Nullable<int> version { get; set; }
-    public byte[] definition { get; set; }
-}
-
 public partial class UserInformation
 {
     public int ID { get; set; }

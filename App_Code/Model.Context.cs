@@ -11,10 +11,10 @@ using System;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 
-public partial class db_1525657_websiteEntities : DbContext
+public partial class db_1525657_sweethswixthshopEntities : DbContext
 {
-    public db_1525657_websiteEntities()
-        : base("name=db_1525657_websiteEntities")
+    public db_1525657_sweethswixthshopEntities()
+        : base("name=db_1525657_sweethswixthshopEntities")
     {
     }
 
@@ -31,6 +31,5 @@ public partial class db_1525657_websiteEntities : DbContext
     public virtual DbSet<Cart> Carts { get; set; }
     public virtual DbSet<Product> Products { get; set; }
     public virtual DbSet<ProductType> ProductTypes { get; set; }
-    public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     public virtual DbSet<UserInformation> UserInformations { get; set; }
 }

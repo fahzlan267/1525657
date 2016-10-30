@@ -9,7 +9,7 @@ public class ProductModel
     {
         try
         {
-            db_1525657_websiteEntities db = new db_1525657_websiteEntities();
+            db_1525657_sweethswixthshopEntities db = new db_1525657_sweethswixthshopEntities();
             db.Products.Add(product);
             db.SaveChanges();
 
@@ -25,7 +25,7 @@ public class ProductModel
     {
         try
         {
-            db_1525657_websiteEntities db = new db_1525657_websiteEntities();
+            db_1525657_sweethswixthshopEntities db = new db_1525657_sweethswixthshopEntities();
             
             Product p = db.Products.Find(id);
 
@@ -49,7 +49,7 @@ public class ProductModel
     {
         try
         {
-            db_1525657_websiteEntities db = new db_1525657_websiteEntities();
+            db_1525657_sweethswixthshopEntities db = new db_1525657_sweethswixthshopEntities();
             Product product = db.Products.Find(id);
 
             db.Products.Attach(product);
@@ -68,7 +68,7 @@ public class ProductModel
     {
         try
         {
-            using (db_1525657_websiteEntities db = new db_1525657_websiteEntities())
+            using (db_1525657_sweethswixthshopEntities db = new db_1525657_sweethswixthshopEntities())
             {
                 Product product = db.Products.Find(id);
                 return product;
@@ -84,7 +84,7 @@ public class ProductModel
     {
         try
         {
-            using (db_1525657_websiteEntities db = new db_1525657_websiteEntities())
+            using (db_1525657_sweethswixthshopEntities db = new db_1525657_sweethswixthshopEntities())
             {
                 List<Product> products = (from x in db.Products
                                 select x).ToList();
@@ -101,7 +101,7 @@ public class ProductModel
     {
         try
         {
-            using (db_1525657_websiteEntities db = new db_1525657_websiteEntities())
+            using (db_1525657_sweethswixthshopEntities db = new db_1525657_sweethswixthshopEntities())
             {
                 List<Product> products = (from x in db.Products
                                                 where x.TypeID == typeId
