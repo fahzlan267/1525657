@@ -23,7 +23,7 @@ public partial class UserAcc_RegistrationAcc : System.Web.UI.Page
 
        
         userStore.Context.Database.Connection.ConnectionString =
-            System.Configuration.ConfigurationManager.ConnectionStrings["db_1525657_websiteConnectionString"].ConnectionString;
+            System.Configuration.ConfigurationManager.ConnectionStrings["db_1525657_sweethswixthshopConnectionString"].ConnectionString;
         var manager = new UserManager<IdentityUser>(userStore);
 
        

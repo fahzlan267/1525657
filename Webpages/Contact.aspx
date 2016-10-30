@@ -33,7 +33,7 @@
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="Please enter you name" ForeColor="#CC0000" ControlToValidate="TextName" Text="*"></asp:RequiredFieldValidator>
                 &nbsp;&nbsp;&nbsp; Address:
                     <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No.32 unit 3, The SwixthShop Ground Floor<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No.32 unit 3, Swixth Candy Shop, Ground Floor<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Laksamana College of Business Building</td>
             </tr>
             <tr>
