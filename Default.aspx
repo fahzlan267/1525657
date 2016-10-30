@@ -29,11 +29,6 @@
 
     </p>
     
-        Search Items:
-        <asp:TextBox ID="TextBoxSearch" runat="server"></asp:TextBox>
-&nbsp;&nbsp;
-        <asp:Button ID="ButtonSearch" runat="server" Text="Button" OnClick="ButtonSearch_Click" />
-
     <p>
 
 
