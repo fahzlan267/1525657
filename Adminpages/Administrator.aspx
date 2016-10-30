@@ -8,7 +8,7 @@
 <asp:GridView ID="GridViewProductsTypes" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlProductTypes" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" Height="257px" Width="268px">
     <AlternatingRowStyle BackColor="#CCCCCC" />
     <Columns>
-        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
         <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
         <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
     </Columns>
@@ -21,7 +21,7 @@
     <SortedDescendingCellStyle BackColor="#CAC9C9" />
     <SortedDescendingHeaderStyle BackColor="#383838" />
 </asp:GridView>
-        <asp:SqlDataSource ID="SqlProductTypes" runat="server" ConnectionString="<%$ ConnectionStrings:db_1525657_websiteConnectionString %>" DeleteCommand="DELETE FROM [ProductType] WHERE [ID] = @ID" InsertCommand="INSERT INTO [ProductType] ([Name]) VALUES (@Name)" SelectCommand="SELECT * FROM [ProductType]" UpdateCommand="UPDATE [ProductType] SET [Name] = @Name WHERE [ID] = @ID">
+        <asp:SqlDataSource ID="SqlProductTypes" runat="server" ConnectionString="<%$ ConnectionStrings:db_1525657_sweethswixthshopConnectionString %>" DeleteCommand="DELETE FROM [ProductType] WHERE [ID] = @ID" InsertCommand="INSERT INTO [ProductType] ([Name]) VALUES (@Name)" SelectCommand="SELECT * FROM [ProductType]" UpdateCommand="UPDATE [ProductType] SET [Name] = @Name WHERE [ID] = @ID">
             <DeleteParameters>
                 <asp:Parameter Name="ID" Type="Int32" />
             </DeleteParameters>
@@ -41,7 +41,7 @@
 <br />
 <asp:GridView ID="GridViewProducts" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlProducts" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="234px" Width="1048px">
     <Columns>
-        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
         <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
         <asp:BoundField DataField="TypeID" HeaderText="TypeID" SortExpression="TypeID" />
         <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
@@ -59,7 +59,7 @@
     <SortedDescendingCellStyle BackColor="#CAC9C9" />
     <SortedDescendingHeaderStyle BackColor="#00547E" />
 </asp:GridView>
-        <asp:SqlDataSource ID="SqlProducts" runat="server" ConnectionString="<%$ ConnectionStrings:db_1525657_websiteConnectionString %>" DeleteCommand="DELETE FROM [Product] WHERE [ID] = @ID" InsertCommand="INSERT INTO [Product] ([TypeID], [Name], [Price], [Information], [Image]) VALUES (@TypeID, @Name, @Price, @Information, @Image)" SelectCommand="SELECT * FROM [Product]" UpdateCommand="UPDATE [Product] SET [TypeID] = @TypeID, [Name] = @Name, [Price] = @Price, [Information] = @Information, [Image] = @Image WHERE [ID] = @ID">
+        <asp:SqlDataSource ID="SqlProducts" runat="server" ConnectionString="<%$ ConnectionStrings:db_1525657_sweethswixthshopConnectionString %>" DeleteCommand="DELETE FROM [Product] WHERE [ID] = @ID" InsertCommand="INSERT INTO [Product] ([TypeID], [Name], [Price], [Information], [Image]) VALUES (@TypeID, @Name, @Price, @Information, @Image)" SelectCommand="SELECT * FROM [Product]" UpdateCommand="UPDATE [Product] SET [TypeID] = @TypeID, [Name] = @Name, [Price] = @Price, [Information] = @Information, [Image] = @Image WHERE [ID] = @ID">
             <DeleteParameters>
                 <asp:Parameter Name="ID" Type="Int32" />
             </DeleteParameters>

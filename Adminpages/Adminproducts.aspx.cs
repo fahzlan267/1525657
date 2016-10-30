@@ -31,7 +31,6 @@ public partial class Adminpages_Adminproducts : System.Web.UI.Page
             TextInformation.Text = product.Information;
             TextName.Text = product.Name;
             TextName.Text = product.Price.ToString();
-
             DropDownListImage.SelectedValue = product.Image;
             DropDownListType.SelectedValue = product.TypeID.ToString();
         }
@@ -64,6 +63,8 @@ public partial class Adminpages_Adminproducts : System.Web.UI.Page
             DropDownListImage.DataSource = imageList;
             DropDownListImage.AppendDataBoundItems = true;
             DropDownListImage.DataBind();
+
+            
         }
         catch (Exception e)
         {
@@ -99,6 +100,27 @@ public partial class Adminpages_Adminproducts : System.Web.UI.Page
         else
         {
             LabelSubmit.Text = productModel.InsertProduct(product);
+        }
+    }
+
+
+
+
+    protected void buttonupload_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            string filename = Path.GetFileName(FileUpload1.FileName);
+            FileUpload1.SaveAs(Server.MapPath("~/Product/") + filename);
+
+            Labelresult.Text = "Image" + filename + "successfully uploaded";
+            Page_Load(sender, e);
+        }
+        
+        catch (Exception)
+        {
+            Labelresult.Text = "Upload Failed";
+
         }
     }
 }
